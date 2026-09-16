@@ -1,0 +1,24 @@
+{
+  "name": "hr-and-payment-automation",
+  "version": "1.0.0",
+  "description": "Comprehensive E2E Automation Suite for HR & Payroll Management and Payment & Credit Settlements on Cafe QR Platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:hr:employee": "playwright test tests/01-hr-employee-management.spec.ts --headed",
+    "test:hr:leave-timesheet": "playwright test tests/02-hr-leave-and-timesheet.spec.ts --headed",
+    "test:hr:payroll": "playwright test tests/03-hr-payroll-and-salary-advances.spec.ts --headed",
+    "test:payments": "playwright test tests/04-payment-settlements-and-modes.spec.ts --headed",
+    "test:negative": "playwright test tests/05-negative-and-boundary-validations.spec.ts --headed",
+    "test:report": "playwright show-report"
+  },
+  "keywords": ["playwright", "automation", "e2e", "hr-module", "payment-module", "cafe-qr"],
+  "author": "Antigravity",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
